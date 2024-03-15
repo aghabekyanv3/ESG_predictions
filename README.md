@@ -10,7 +10,7 @@ The project is currently undergoing updates to refine the analysis further and i
 
 ## Initial Clustering
 
-The initial phase of the project involved clustering using the `KMeans` algorithm from Scikit-learn, supported by text data processing with `TfidfVectorizer`. This approach aimed to identify meaningful patterns and groupings within the data, providing a preliminary understanding of the underlying structures.
+Firstly, I restructured the data to aggregate the ESG goals of each company, then applied some NLP methods such as removing stopwords and Tfidf vectorization. Then I applied PCA for dimensionality reduction, and clustered based on the obtained PCA results. Afterwards, the goal is to make a prediction of what cluster a company would belong to, only given the characteristics of the company. I used Optuna for hyperparameter tuning, and classifier algorithms such as Random Forest, Gaussian NB, k-NN, J48 Decision Tree, Multilayer Perceptron, and SVM. Since the dataset was small and unbalanced, I tried oversampling techniques such as SMOTE and random oversampling before performing the classification. So far, the highest accuracy was with Random Forest. However, I will check again after obtaining more data. Currently working on the visualisations.
 
 ## Refined Analysis
 
